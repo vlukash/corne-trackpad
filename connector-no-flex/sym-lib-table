@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name trackpad_conn-rescue)(type Legacy)(uri ${KIPRJMOD}/trackpad_conn-rescue.lib)(options "")(descr ""))
+)

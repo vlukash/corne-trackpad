@@ -1,0 +1,316 @@
+EESchema Schematic File Version 4
+LIBS:trackpad_conn-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Trackpad connector"
+Date "2019-03-24"
+Rev "2.0"
+Comp "vlukash"
+Comment1 "TP has to be mounted directly on the PCB."
+Comment2 "This version doesn't support flex connection beetween PCB and TP. "
+Comment3 "Connector for the BlackBerry 8520 trackpad"
+Comment4 ""
+$EndDescr
+$Comp
+L power:+2V8 #PWR0101
+U 1 1 5BFBC183
+P 2100 1300
+F 0 "#PWR0101" H 2100 1150 50  0001 C CNN
+F 1 "+2V8" H 2115 1473 50  0000 C CNN
+F 2 "" H 2100 1300 50  0001 C CNN
+F 3 "" H 2100 1300 50  0001 C CNN
+	1    2100 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 1550 2100 1550
+Wire Wire Line
+	2100 1550 2100 1300
+$Comp
+L power:GND #PWR0102
+U 1 1 5BFBC18B
+P 2100 2150
+F 0 "#PWR0102" H 2100 1900 50  0001 C CNN
+F 1 "GND" H 2105 1977 50  0000 C CNN
+F 2 "" H 2100 2150 50  0001 C CNN
+F 3 "" H 2100 2150 50  0001 C CNN
+	1    2100 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 1950 2100 1950
+Wire Wire Line
+	2100 1950 2100 2150
+Text GLabel 2050 1850 0    50   Input ~ 0
+SCK_2V85
+Text GLabel 4600 1750 2    50   Input ~ 0
+MISO_2V85
+Text GLabel 2050 1750 0    50   Input ~ 0
+MOSI_2V85
+Wire Wire Line
+	4600 1550 4200 1550
+Wire Wire Line
+	4600 1650 4200 1650
+Wire Wire Line
+	4600 1750 4200 1750
+Text GLabel 4600 1650 2    50   Input ~ 0
+TP_CS_2V85
+$Comp
+L power:GND #PWR0103
+U 1 1 5BFBC19A
+P 4550 2100
+F 0 "#PWR0103" H 4550 1850 50  0001 C CNN
+F 1 "GND" H 4555 1927 50  0000 C CNN
+F 2 "" H 4550 2100 50  0001 C CNN
+F 3 "" H 4550 2100 50  0001 C CNN
+	1    4550 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 1950 4550 2100
+Wire Wire Line
+	4550 1950 4200 1950
+Text GLabel 4600 1550 2    50   Input ~ 0
+TP_MOTION_2V85
+Wire Wire Line
+	2200 1650 2050 1650
+Text GLabel 2050 1650 0    50   Input ~ 0
+TP_SHUTDOWN_2V85
+Wire Wire Line
+	2200 1750 2050 1750
+Text GLabel 4600 1850 2    50   Input ~ 0
+TP_RESET_2v85
+Wire Wire Line
+	2200 1850 2050 1850
+$Comp
+L trackpad_conn-rescue:67997-410HLF-symbols-trackpad_conn-rescue J1
+U 1 1 5BFBC49D
+P 2200 1550
+F 0 "J1" H 3200 1937 60  0000 C CNN
+F 1 "67997-410HLF" H 3200 1831 60  0000 C CNN
+F 2 "trackpad:67997-410HLF" H 3200 1790 60  0001 C CNN
+F 3 "" H 2200 1550 60  0000 C CNN
+	1    2200 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L trackpad_conn-rescue:DF30FB-20DS-0.4V(82)-DF30FB-20DS-0.4V_82_-trackpad_conn-rescue J2
+U 1 1 5BFC2433
+P 3150 4300
+F 0 "J2" H 3150 5067 50  0000 C CNN
+F 1 "DF30FB-20DS-0.4V(82)" H 3150 4976 50  0000 C CNN
+F 2 "trackpad:HIROSE_DF30FB-20DS-0.4V(82)" H 3150 4300 50  0001 L BNN
+F 3 "None" H 3150 4300 50  0001 L BNN
+F 4 "H11591CT-ND" H 3150 4300 50  0001 L BNN "Field4"
+F 5 "DF30FB-20DS-0.4V_82_" H 3150 4300 50  0001 L BNN "Field5"
+F 6 "https://www.digikey.com/product-detail/en/hirose-electric-co-ltd/DF30FB-20DS-0.4V_82_/H11591CT-ND/1949227?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" H 3150 4300 50  0001 L BNN "Field6"
+F 7 "Hirose" H 3150 4300 50  0001 L BNN "Field7"
+F 8 "Conn Board to Board SKT 20 POS 0.4mm Solder ST SMD Embossed T/R" H 3150 4300 50  0001 L BNN "Field8"
+	1    3150 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5BFC28C8
+P 2250 3800
+F 0 "#PWR0104" H 2250 3550 50  0001 C CNN
+F 1 "GND" V 2255 3672 50  0000 R CNN
+F 2 "" H 2250 3800 50  0001 C CNN
+F 3 "" H 2250 3800 50  0001 C CNN
+	1    2250 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2650 3800 2250 3800
+$Comp
+L power:GND #PWR0105
+U 1 1 5BFC3092
+P 4050 4700
+F 0 "#PWR0105" H 4050 4450 50  0001 C CNN
+F 1 "GND" V 4055 4572 50  0000 R CNN
+F 2 "" H 4050 4700 50  0001 C CNN
+F 3 "" H 4050 4700 50  0001 C CNN
+	1    4050 4700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3650 4700 4050 4700
+Text GLabel 2100 4000 0    50   Input ~ 0
+TP_RESET_2v85
+Wire Wire Line
+	2650 4000 2100 4000
+Wire Wire Line
+	4600 1850 4200 1850
+NoConn ~ 3650 3800
+NoConn ~ 2650 3900
+NoConn ~ 3650 3900
+NoConn ~ 3650 4000
+Text GLabel 2100 4100 0    50   Input ~ 0
+TP_SHUTDOWN_2V85
+Wire Wire Line
+	2100 4100 2650 4100
+NoConn ~ 3650 4100
+Text GLabel 2100 4200 0    50   Input ~ 0
+TP_CS_2V85
+Wire Wire Line
+	2100 4200 2650 4200
+$Comp
+L Device:R_Small_US R1
+U 1 1 5BFC6507
+P 4150 4200
+F 0 "R1" V 3945 4200 50  0000 C CNN
+F 1 "220k" V 4036 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4150 4200 50  0001 C CNN
+F 3 "~" H 4150 4200 50  0001 C CNN
+	1    4150 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4050 4200 3650 4200
+$Comp
+L power:+2V8 #PWR0106
+U 1 1 5BFC6CEC
+P 4500 4200
+F 0 "#PWR0106" H 4500 4050 50  0001 C CNN
+F 1 "+2V8" V 4400 4250 50  0000 C CNN
+F 2 "" H 4500 4200 50  0001 C CNN
+F 3 "" H 4500 4200 50  0001 C CNN
+	1    4500 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4250 4200 4350 4200
+Text GLabel 2100 4300 0    50   Input ~ 0
+SCK_2V85
+Wire Wire Line
+	2100 4300 2650 4300
+Wire Wire Line
+	3650 4300 4350 4300
+Wire Wire Line
+	4350 4300 4350 4200
+Connection ~ 4350 4200
+Wire Wire Line
+	4350 4200 4500 4200
+Text GLabel 2100 4400 0    50   Input ~ 0
+MOSI_2V85
+Wire Wire Line
+	2100 4400 2650 4400
+$Comp
+L Device:R_Small_US R2
+U 1 1 5BFC98B0
+P 4150 4400
+F 0 "R2" V 3945 4400 50  0000 C CNN
+F 1 "220k" V 4036 4400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 4150 4400 50  0001 C CNN
+F 3 "~" H 4150 4400 50  0001 C CNN
+	1    4150 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4050 4400 3650 4400
+$Comp
+L power:GND #PWR0107
+U 1 1 5BFC9D8F
+P 4500 4400
+F 0 "#PWR0107" H 4500 4150 50  0001 C CNN
+F 1 "GND" V 4505 4272 50  0000 R CNN
+F 2 "" H 4500 4400 50  0001 C CNN
+F 3 "" H 4500 4400 50  0001 C CNN
+	1    4500 4400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4250 4400 4500 4400
+Text GLabel 2100 4500 0    50   Input ~ 0
+MISO_2V85
+Wire Wire Line
+	2100 4500 2650 4500
+NoConn ~ 3650 4500
+Text GLabel 2100 4600 0    50   Input ~ 0
+TP_MOTION_2V85
+Wire Wire Line
+	2100 4600 2650 4600
+$Comp
+L power:+2V8 #PWR0108
+U 1 1 5BFCF1B5
+P 2200 4700
+F 0 "#PWR0108" H 2200 4550 50  0001 C CNN
+F 1 "+2V8" V 2200 4900 50  0000 C CNN
+F 2 "" H 2200 4700 50  0001 C CNN
+F 3 "" H 2200 4700 50  0001 C CNN
+	1    2200 4700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2200 4700 2650 4700
+NoConn ~ 3650 4600
+$Comp
+L power:GND #PWR0109
+U 1 1 5BFBE59A
+P 7050 1850
+F 0 "#PWR0109" H 7050 1600 50  0001 C CNN
+F 1 "GND" H 7055 1677 50  0000 C CNN
+F 2 "" H 7050 1850 50  0001 C CNN
+F 3 "" H 7050 1850 50  0001 C CNN
+	1    7050 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5BFBE5A0
+P 6800 1550
+F 0 "C1" H 6892 1596 50  0000 L CNN
+F 1 "100pF" H 6892 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6800 1550 50  0001 C CNN
+F 3 "~" H 6800 1550 50  0001 C CNN
+	1    6800 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5BFBE5A7
+P 7300 1550
+F 0 "C2" H 7392 1596 50  0000 L CNN
+F 1 "100nF" H 7392 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7300 1550 50  0001 C CNN
+F 3 "~" H 7300 1550 50  0001 C CNN
+	1    7300 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 1350 7050 1350
+Wire Wire Line
+	6800 1350 6800 1450
+Wire Wire Line
+	7300 1350 7300 1450
+Wire Wire Line
+	6800 1750 7050 1750
+Wire Wire Line
+	7300 1750 7300 1650
+Wire Wire Line
+	6800 1650 6800 1750
+Wire Wire Line
+	7050 1850 7050 1750
+Connection ~ 7050 1750
+Wire Wire Line
+	7050 1750 7300 1750
+Wire Wire Line
+	7050 1250 7050 1350
+Connection ~ 7050 1350
+Wire Wire Line
+	7050 1350 6800 1350
+$Comp
+L power:+2V8 #PWR0110
+U 1 1 5BFBE5BA
+P 7050 1250
+F 0 "#PWR0110" H 7050 1100 50  0001 C CNN
+F 1 "+2V8" H 7065 1423 50  0000 C CNN
+F 2 "" H 7050 1250 50  0001 C CNN
+F 3 "" H 7050 1250 50  0001 C CNN
+	1    7050 1250
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
