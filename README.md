@@ -25,6 +25,25 @@ https://www.youtube.com/watch?v=eY_9cieYMEQ
 ## Build Guide
 https://github.com/vlukash/corne-trackpad/blob/master/build-guide.md
 
+## Firmware
+Corne keyboard uses [QMK](https://github.com/qmk/qmk_firmware) - an open-source keyboard firmware project.  
+Please use [QMK guide](https://docs.qmk.fm/#/newbs_getting_started) to setup your local environment.  
+
+The Trackpad add-on uses right-master configuration, and USB cable connects to the right keyboard with the trackpad.
+
+Because of the adapter PCB, left and right keyboards have to be flashed with different firmware.
+
+To build and flash the right keyboard (with the trackpad):
+```
+make crkbd:vlukash_trackpad_right:dfu
+```
+And the left part
+```
+make crkbd:vlukash_trackpad_left:dfu
+```
+
+[Here is a PR](https://github.com/qmk/qmk_firmware/pull/5925) that could be used as an example for creating your own Corne keymaps with the Trackpad add-on support.
+
 ## Photos
 Trackpad sensor mounted directly on the connector PCB (Connector V2):
 ![Corne with no-flex trackpad](https://user-images.githubusercontent.com/8005242/55286180-b9b86480-534c-11e9-8c8a-0b9ddae888fb.JPG)
